@@ -1,0 +1,35 @@
+{
+	"pack": {
+		"pack_format": 48,
+		"supported_formats": [34,71],
+		"description": [
+			{
+				"text": "Auto Trade Cap V1.0[MC1.21.x]\n"
+			},
+			{
+				"text": "By 刘拾叶 | PickLeaf",
+				"color": "gold"
+			}
+		]
+	},
+	"overlays": {
+		"entries": [
+			{
+				"formats": [57, 999],
+				"directory": "1_21_2_plus"
+			},
+			{
+				"formats": [62, 999],
+				"directory": "25w03a_plus"
+			},
+			{
+				"formats": [48, 71],
+				"directory": "print_info"
+			},
+			{
+				"formats": [62, 999],
+				"directory": "print_info_1_21_5_plus"
+			}
+		]
+	}
+}

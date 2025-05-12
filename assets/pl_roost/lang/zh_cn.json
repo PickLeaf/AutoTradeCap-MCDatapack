@@ -1,0 +1,9 @@
+{
+    "at_td_cp.mod_name": "自动交易帽子",
+    "at_td_cp.link": "[链接]",
+    "at_td_cp.load_wrong_version": "(被加载到了错误的版本！)",
+    "at_td_cp.load_resourcepack": "",
+    "at_td_cp.enchantment.auto_trade": "自动交易",
+    "at_td_cp.advancement.high_iq.title": "高智商",
+    "at_td_cp.advancement.high_iq.description": "使用侦测器、凋灵骷髅头颅、合成器在锻造台合成自动交易帽"
+}

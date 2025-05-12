@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:nether/get_wither_skull",
+  "display": {
+    "title": {
+      "translate": "at_td_cp.advancement.high_iq.title",
+      "fallback": "高智商"
+    },
+    "description": {
+      "translate": "at_td_cp.advancement.high_iq.description",
+      "fallback": "使用侦测器、凋灵骷髅头颅、合成器在锻造台合成一个自动交易帽"
+    },
+    "icon": {
+      "id": "minecraft:villager_spawn_egg"
+    }
+  },
+  "criteria": {
+    "has_auto_trade_cap": {
+      "conditions": {
+        "recipe_id": "at_td_cp:auto_trade_cap"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "requirements": [
+    [
+      "has_auto_trade_cap"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "at_td_cp.mod_name": "Roost",
+    "at_td_cp.link": "[Link]",
+    "at_td_cp.load_wrong_version": "(Be loaded to WRONG version!)",
+    "at_td_cp.load_resourcepack": "",
+    "at_td_cp.enchantment.auto_trade": "Auto Trade",
+    "at_td_cp.advancement.high_iq.title": "High IQ              ",
+    "at_td_cp.advancement.high_iq.description": "Use Observer, Wither Skeleton Skull, Crafter to craft Auto Trade Cap at the Smithing Table"
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "recipes/root",
+  "criteria": {
+    "has_skull": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wither_skeleton_skull"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_skull"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "at_td_cp:auto_trade_cap"
+    ]
+  }
+}
