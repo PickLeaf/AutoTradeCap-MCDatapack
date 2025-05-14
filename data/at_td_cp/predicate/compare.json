@@ -3,13 +3,13 @@
     "value": {
         "type": "minecraft:storage",
         "storage": "at_td_cp:mem",
-        "path": "compare.value"
+        "path": "compound.value"
     },
     "range": {
         "max": {
             "type": "minecraft:storage",
             "storage": "at_td_cp:mem",
-            "path": "compare.max"
+            "path": "compound.max"
         }
     }
 }

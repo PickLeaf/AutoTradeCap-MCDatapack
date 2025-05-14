@@ -15,20 +15,20 @@
 	"overlays": {
 		"entries": [
 			{
-				"formats": [49, 999],
+				"formats": [49, 9999],
 				"directory": "24w33a_p"
 			},
 			{
-				"formats": [70, 999],
+				"formats": [62, 9999],
+				"directory": "25w02a_p"
+			},
+			{
+				"formats": [70, 9999],
 				"directory": "25w10a_p"
 			},
 			{
 				"formats": [48, 71],
 				"directory": "print_info"
-			},
-			{
-				"formats": [62, 999],
-				"directory": "print_info_1_21_5_plus"
 			}
 		]
 	}
