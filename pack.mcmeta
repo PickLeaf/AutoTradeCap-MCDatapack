@@ -15,12 +15,12 @@
 	"overlays": {
 		"entries": [
 			{
-				"formats": [57, 999],
-				"directory": "1_21_2_plus"
+				"formats": [49, 999],
+				"directory": "24w33a_p"
 			},
 			{
-				"formats": [62, 999],
-				"directory": "25w03a_plus"
+				"formats": [70, 999],
+				"directory": "25w10a_p"
 			},
 			{
 				"formats": [48, 71],

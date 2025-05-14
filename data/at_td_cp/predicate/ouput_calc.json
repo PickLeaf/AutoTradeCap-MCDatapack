@@ -1,8 +1,0 @@
-{
-    "condition": "minecraft:random_chance",
-    "chance": {
-        "type": "storage",
-        "storage": "at_td_cp",
-        "path": "temp"
-    }
-}

@@ -5,6 +5,21 @@
     "fallback": "自动交易"
   },
   "effects": {
+    "minecraft:location_changed": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/update"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "minecraft:villager"
+          }
+        }
+      }
+    ],
     "minecraft:tick": [
       {
         "effect": {
@@ -24,7 +39,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "blocks": "minecraft:water"
+                "blocks": "minecraft:fire"
               }
             }
           }
@@ -33,7 +48,7 @@
       {
         "effect": {
           "type": "minecraft:run_function",
-          "function": "at_td_cp:trade/chk"
+          "function": "at_td_cp:trade/a"
         },
         "requirements": [
           {
@@ -41,7 +56,23 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:villager",
-              "periodic_tick": 4
+              "periodic_tick": 4,
+              "nbt": "{Tags:[\"at_td_cp.onlyBuyA\"]}"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:redstone_lamp",
+                  "state": {
+                    "lit": "true"
+                  }
+                }
+              }
             }
           },
           {
@@ -50,6 +81,47 @@
             "predicate": {
               "block": {
                 "nbt": "{Items:[{Slot:0b}]}"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/b"
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:villager",
+              "periodic_tick": 4,
+              "nbt": "{Tags:[\"at_td_cp.hasBuyB\"]}"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:redstone_lamp",
+                  "state": {
+                    "lit": "true"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "offsetY": 2,
+            "predicate": {
+              "block": {
+                "nbt": "{Items:[{Slot:0b},{Slot:1b}]}"
               }
             }
           }

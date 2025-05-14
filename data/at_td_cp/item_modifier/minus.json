@@ -4,6 +4,6 @@
   "count": {
     "type": "minecraft:storage",
     "storage": "at_td_cp:mem",
-    "path": "minus"
+    "path": "int"
   }
 }

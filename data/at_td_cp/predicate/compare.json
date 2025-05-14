@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:storage",
+        "storage": "at_td_cp:mem",
+        "path": "compare.value"
+    },
+    "range": {
+        "max": {
+            "type": "minecraft:storage",
+            "storage": "at_td_cp:mem",
+            "path": "compare.max"
+        }
+    }
+}
