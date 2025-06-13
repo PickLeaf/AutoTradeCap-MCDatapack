@@ -39,3 +39,6 @@ data \
 execute \
     summon minecraft:chest_minecart \
     run function at_td_cp:trade/drop
+#make some noise
+playsound \
+    entity.villager.trade hostile @a ~ ~ ~

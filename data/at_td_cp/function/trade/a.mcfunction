@@ -34,3 +34,6 @@ execute \
 loot \
     spawn ~ ~ ~ loot \
     at_td_cp:xp_bottle
+#make some noise
+playsound \
+    entity.villager.trade hostile @a ~ ~ ~
