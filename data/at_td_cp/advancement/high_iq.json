@@ -3,11 +3,11 @@
   "display": {
     "title": {
       "translate": "at_td_cp.advancement.high_iq.title",
-      "fallback": "高智商"
+      "fallback": "High IQ              "
     },
     "description": {
       "translate": "at_td_cp.advancement.high_iq.description",
-      "fallback": "使用侦测器、凋灵骷髅头颅、合成器在锻造台合成一个自动交易帽"
+      "fallback": "Use Observer, Wither Skeleton Skull, Crafter to craft Auto Trade Cap at the Smithing Table"
     },
     "icon": {
       "id": "minecraft:villager_spawn_egg"

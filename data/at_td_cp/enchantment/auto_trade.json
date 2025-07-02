@@ -2,7 +2,7 @@
   "anvil_cost": 4,
   "description": {
     "translate": "at_td_cp.enchantment.auto_trade",
-    "fallback": "自动交易"
+    "fallback": "Auto Trade"
   },
   "effects": {
     "minecraft:location_changed": [
