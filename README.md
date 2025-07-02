@@ -1,3 +1,5 @@
+<a href="https://www.curseforge.com/minecraft/data-packs/auto-trade-cap">[Curseforge]</a>
+<a href="https://modrinth.com/datapack/auto_trade_cap">[Modrinth]</a>
 # Minecraft Datapack
 Added automatic trading enchantment to the Wither Skeleton Skull, Using Dispenser to put it on Villager allows for automatic trading.
 Place Container on top of head of Villager, And provide the items they buy, Traded items will drop.
