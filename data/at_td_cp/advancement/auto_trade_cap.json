@@ -1,6 +1,12 @@
 {
   "parent": "recipes/root",
   "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:oak_boat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
     "has_skull": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -14,6 +20,7 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_skull"
     ]
   ],

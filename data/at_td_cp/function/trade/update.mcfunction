@@ -1,3 +1,5 @@
+# 更新交易项标签
+# update tag of trade item
 tag @s remove at_td_cp.onlyBuyA
 tag @s remove at_td_cp.hasBuyB
 tag @s remove at_td_cp.hasA_cpn
@@ -14,6 +16,8 @@ execute \
 execute \
     if data entity @s Offers.Recipes[0].buyB.components \
     run tag @s add at_td_cp.hasB_cpn
+# 固定村民
+# fix villager position
 data \
     modify entity @s NoAI set value 0b
 execute \
