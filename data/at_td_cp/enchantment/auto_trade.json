@@ -5,6 +5,24 @@
     "fallback": "Auto Trade"
   },
   "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/attack/villager"
+        }
+      },
+      {
+        "affected": "attacker",
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/attack/attacker"
+        }
+      }
+    ],
     "minecraft:location_changed": [
       {
         "effect": {
@@ -139,7 +157,8 @@
   },
   "max_level": 1,
   "slots": [
-    "head"
+    "head",
+    "mainhand"
   ],
   "supported_items": "minecraft:wither_skeleton_skull",
   "primary_items": [],
