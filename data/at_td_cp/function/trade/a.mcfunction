@@ -1,20 +1,23 @@
 # 对比物品数量
+# Compare item count
 execute \
     if function at_td_cp:trade/a/chk_count \
     run return 1
 # 对比物品id
+# Compare item id
 execute \
     if function at_td_cp:trade/a/chk_id \
     run return 1
 # 对比物品组件
+# Compare item components
 execute \
     if entity @s[tag=at_td_cp.hasA_cpn] \
     if function at_td_cp:trade/a/chk_cpn \
     run return 1
 # 能够成功交易
-# can trade successly
+# Able to trade successfully
 # 减少物品数量
-# minus item count
+# Decrease item count
 execute \
     store result storage at_td_cp:mem int int -1 \
     run data \
@@ -22,7 +25,7 @@ execute \
 item \
     modify block ~ ~2 ~ container.0 at_td_cp:minus
 # 掉落售卖物品
-# drop selled item
+# Drop sold item
 data \
     modify storage at_td_cp:mem compound \
     set from entity @s Offers.Recipes[0].sell
@@ -30,7 +33,7 @@ execute \
     summon minecraft:chest_minecart \
     run function at_td_cp:trade/drop
 # 掉落经验瓶
-# drop xp bottle
+# Drop experience bottle
 data \
     modify storage at_td_cp:mem int \
     set value 0
@@ -42,6 +45,6 @@ loot \
     spawn ~ ~ ~ loot \
     at_td_cp:xp_bottle
 # 整点声
-# make some noise
+# Play trade sound
 playsound \
     entity.villager.trade hostile @a ~ ~ ~
