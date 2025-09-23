@@ -11,7 +11,7 @@
         "enchanted": "attacker",
         "effect": {
           "type": "minecraft:run_function",
-          "function": "at_td_cp:trade/attack/villager"
+          "function": "at_td_cp:attack/villager"
         }
       },
       {
@@ -19,7 +19,7 @@
         "enchanted": "attacker",
         "effect": {
           "type": "minecraft:run_function",
-          "function": "at_td_cp:trade/attack/attacker"
+          "function": "at_td_cp:attack/attacker"
         }
       }
     ],

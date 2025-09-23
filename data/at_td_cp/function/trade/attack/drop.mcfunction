@@ -1,1 +1,0 @@
-loot spawn ~ ~ ~ loot at_td_cp:auto_trade_cap
