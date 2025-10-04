@@ -1,7 +1,9 @@
 {
 	"pack": {
 		"pack_format": 48,
-		"supported_formats": [34,81],
+		"min_format": 34,
+		"max_format": 88,
+		"supported_formats": [34, 88],
 		"description": [
 			{
 				"text": "Auto Trade Cap V1.2[MC1.21.x]\n"
@@ -16,14 +18,20 @@
 		"entries": [
 			{
 				"formats": [49, 9999],
+				"min_format": 49,
+				"max_format": 9999,
 				"directory": "24w33a_p"
 			},
 			{
 				"formats": [62, 9999],
+				"min_format": 62,
+				"max_format": 9999,
 				"directory": "25w02a_p"
 			},
 			{
-				"formats": [48, 81],
+				"formats": [48, 88],
+				"min_format": 48,
+				"max_format": 88,
 				"directory": "print_info"
 			}
 		]

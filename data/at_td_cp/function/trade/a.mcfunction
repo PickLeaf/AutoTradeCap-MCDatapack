@@ -35,7 +35,7 @@ execute \
 # 掉落经验瓶
 # Drop experience bottle
 data \
-    modify storage at_td_cp:mem int \
+    modify storage at_td_cp:mem float \
     set value 0
 execute \
     store result storage at_td_cp:mem float float 0.1 \
