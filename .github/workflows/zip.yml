@@ -1,0 +1,45 @@
+name: Create Release Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag'
+        required: true
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Create Archive
+      run: |
+        # 获取标签名作为版本号
+        VERSION=${GITHUB_REF#refs/tags/}
+        # 创建包含所有文件的 zip 包
+        zip -r ${{ github.event.repository.name }}-${VERSION}.zip .
+
+    - name: Create Release Draft
+      uses: softprops/action-gh-release@v2.0.8
+      with:
+        tag_name: ${{ github.ref }}
+        name: Release ${{ github.ref_name }}
+        draft: true  # 创建为草稿
+        prerelease: false
+        files: ${{ github.event.repository.name }}-*.zip
+        body: |
+          ## Release Notes
+          
+          Automated release created from tag ${{ github.ref_name }}
+          
+          ### Changes
+          - 自动打包所有文件和文件夹
+          - 包含 tar.gz 和 zip 格式
+          
+          ### 下载
+          - **${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz** (Gzip 压缩)
+          - **${{ github.event.repository.name }}-${{ github.ref_name }}.zip** (Zip 压缩)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
