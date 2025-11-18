@@ -22,6 +22,8 @@ jobs:
     - name: create release with assests
       continue-on-error: true
       uses: phuonghuynh/action-ghrelease@v1.1.0
+      env:
+        GITHUB_TOKEN: ${{env._GITHUB_PAT}}
       with:
         repository: phuonghuynh/testci3
         commitish: main
