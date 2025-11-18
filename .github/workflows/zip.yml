@@ -16,12 +16,12 @@ jobs:
       uses: thedoctor0/zip-release@0.7.5
       with:
         type: 'zip'
-        filename: 'release ${{ inputs.version }}.zip'
+        filename: 'AutoTradeCap_${{ inputs.version }}.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
 
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: '${{inputs.version}}-1.21.x'
-        files: 'AutoTradeCap_V1.2-${{inputs.version}}.zip'
+        files: 'AutoTradeCap_${{inputs.version}}.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
