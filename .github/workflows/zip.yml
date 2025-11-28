@@ -25,6 +25,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         name: '${{inputs.version}} For MC1.21.x'
-        tag_name: '${{inputs.version}}-1.21.x'
+        tag_name: '${{inputs.version}}-MC1.21.x'
         files: 'AutoTradeCap_${{inputs.version}}.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
