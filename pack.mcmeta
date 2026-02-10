@@ -2,11 +2,11 @@
 	"pack": {
 		"pack_format": 48,
 		"min_format": 34,
-		"max_format": 88,
-		"supported_formats": [34, 88],
+		"max_format": 94,
+		"supported_formats": [34, 94],
 		"description": [
 			{
-				"text": "Auto Trade Cap V1.3[MC1.21.x]\n"
+				"text": "Auto Trade Cap V1.4[MC1.21.x]\n"
 			},
 			{
 				"text": "By 刘拾叶 | PickLeaf",
@@ -29,9 +29,9 @@
 				"directory": "25w02a_p"
 			},
 			{
-				"formats": [48, 88],
+				"formats": [48, 94],
 				"min_format": 48,
-				"max_format": 88,
+				"max_format": 94,
 				"directory": "print_info"
 			}
 		]

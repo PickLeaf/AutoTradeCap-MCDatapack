@@ -4,27 +4,19 @@
         "condition": "minecraft:any_of",
         "terms": [
             {
-                "condition": "minecraft:all_of",
-                "terms": [
-                    {
-                        "condition": "minecraft:value_check",
-                        "value": {
-                            "type": "minecraft:storage",
-                            "storage": "at_td_cp:mem",
-                            "path": "compound.value"
-                        },
-                        "range": 64
-                    },
-                    {
-                        "condition": "minecraft:value_check",
-                        "value": {
-                            "type": "minecraft:storage",
-                            "storage": "at_td_cp:mem",
-                            "path": "compound.max"
-                        },
-                        "range": 64
+                "condition": "minecraft:value_check",
+                "value": {
+                    "type": "minecraft:storage",
+                    "storage": "at_td_cp:var",
+                    "path": "compound.value"
+                },
+                "range": {
+                    "min": {
+                        "type": "minecraft:storage",
+                        "storage": "at_td_cp:var",
+                        "path": "int"
                     }
-                ]
+                }
             },
             {
                 "condition": "minecraft:inverted",
@@ -32,13 +24,13 @@
                     "condition": "minecraft:value_check",
                     "value": {
                         "type": "minecraft:storage",
-                        "storage": "at_td_cp:mem",
+                        "storage": "at_td_cp:var",
                         "path": "compound.value"
                     },
                     "range": {
                         "max": {
                             "type": "minecraft:storage",
-                            "storage": "at_td_cp:mem",
+                            "storage": "at_td_cp:var",
                             "path": "compound.max"
                         }
                     }

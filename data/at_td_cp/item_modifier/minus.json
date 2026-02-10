@@ -3,7 +3,7 @@
   "add": true,
   "count": {
     "type": "minecraft:storage",
-    "storage": "at_td_cp:mem",
+    "storage": "at_td_cp:var",
     "path": "int"
   }
 }

@@ -14,7 +14,7 @@
                   "n": 1,
                   "p": {
                     "type": "minecraft:storage",
-                    "storage": "at_td_cp:mem",
+                    "storage": "at_td_cp:var",
                     "path": "float"
                   }
                 }

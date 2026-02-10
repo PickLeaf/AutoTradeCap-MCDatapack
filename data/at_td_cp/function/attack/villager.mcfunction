@@ -1,3 +1,4 @@
+# 这段为什么不用if entity @s[type=villager]呢🤔我这么做一定有其道理的，应该
 execute unless predicate {\
         "condition": "minecraft:entity_properties",\
         "entity": "this",\
