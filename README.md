@@ -11,3 +11,7 @@ Only the first trade line can be automatic traded, And immerse the Villager'legs
 在村民头上放容器提供村民收购的物品，交易出的物品会被村民丢出。
 容器第一格槽位对应村民收购的第一个物品，第二格槽位对应第二个。
 只能自动交易第一项交易项，将村民腿部浸入火焰中以循环交易列表。
+## 关闭每次进入存档时打印的版本信息
+```mcfunction
+data modify storage at_td_cp:config disableShowVersion set value 1b
+```
