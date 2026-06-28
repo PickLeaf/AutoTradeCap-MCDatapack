@@ -1,21 +1,21 @@
 {
     "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:wither_skeleton_skull",
-            "functions": [
-              {
-                "function": "minecraft:set_enchantments",
-                "enchantments": {
-                  "at_td_cp:auto_trade": 1
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:wither_skeleton_skull",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_enchantments",
+                            "enchantments": {
+                                "at_td_cp:auto_trade": 1
+                            }
+                        }
+                    ]
                 }
-              }
             ]
-          }
-        ]
-      }
+        }
     ]
-  }
+}

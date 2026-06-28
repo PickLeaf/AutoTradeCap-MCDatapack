@@ -4,5 +4,6 @@ data modify storage at_td_cp:print cmd.version \
     {"text": " "},\
     {"type": "nbt",\
     "nbt": "version",\
-    "storage": "at_td_cp:config"},\
-    {"text": "[MC1.21.x]"}'
+    "storage": "at_td_cp:config",\
+    "interpret": true},\
+    {"text": "[MC1.21+]"}'

@@ -1,0 +1,166 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "at_td_cp.enchantment.auto_trade",
+    "fallback": "Auto Trade"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:attack/villager"
+        }
+      },
+      {
+        "affected": "attacker",
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:attack/attacker"
+        }
+      }
+    ],
+    "minecraft:location_changed": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/update"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:villager"
+          }
+        }
+      }
+    ],
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/cyc"
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:villager",
+              "minecraft:periodic_tick": 20
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:fire"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/a"
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:villager",
+              "periodic_tick": 4,
+              "nbt": "{Tags:[\"at_td_cp.onlyBuyA\"]}"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:redstone_lamp",
+                  "state": {
+                    "lit": "true"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "offsetY": 2,
+            "predicate": {
+              "block": {
+                "nbt": "{Items:[{Slot:0b}]}"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "at_td_cp:trade/b"
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:villager",
+              "periodic_tick": 4,
+              "nbt": "{Tags:[\"at_td_cp.hasBuyB\"]}"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:redstone_lamp",
+                  "state": {
+                    "lit": "true"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "offsetY": 2,
+            "predicate": {
+              "block": {
+                "nbt": "{Items:[{Slot:0b},{Slot:1b}]}"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 2,
+    "per_level_above_first": 0
+  },
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "slots": [
+    "head",
+    "mainhand"
+  ],
+  "supported_items": "minecraft:wither_skeleton_skull",
+  "primary_items": [],
+  "weight": 1
+}

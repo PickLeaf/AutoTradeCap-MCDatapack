@@ -30,12 +30,6 @@ execute summon minecraft:chest_minecart \
     run function at_td_cp:trade/drop
 # 掉落经验瓶
 # Drop experience bottle
-data modify storage at_td_cp:var float \
-    set value 0
-execute store result \
-    storage at_td_cp:var float float 0.1 \
-    run data \
-        get storage at_td_cp:var Offers.xp
 loot spawn ~ ~ ~ loot at_td_cp:xp_bottle
 # 整点声
 # Play trade sound

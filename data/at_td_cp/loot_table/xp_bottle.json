@@ -1,27 +1,25 @@
 {
     "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:experience_bottle",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:binomial",
-                  "n": 1,
-                  "p": {
-                    "type": "minecraft:storage",
-                    "storage": "at_td_cp:var",
-                    "path": "float"
-                  }
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:experience_bottle",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "min": 0,
+                                "max": 1000
+                            },
+                            "range": {
+                                "max": 857
+                            }
+                        }
+                    ]
                 }
-              }
             ]
-          }
-        ]
-      }
+        }
     ]
-  }
+}
